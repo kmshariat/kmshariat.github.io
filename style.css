@@ -1,0 +1,100 @@
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #252526;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+a:visited {
+  color: #fff; /* Change the color to purple for visited links */
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.content h2 {
+  color: #fff;
+}
+
+.EduClass td {
+  border-bottom: 1px solid #fff; /* Add a bottom border to each td */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.EduClass tr:last-child td {
+  border-bottom: none; /* Remove the bottom border for the last row */
+}
+
+.Courses td {
+  border-bottom: 1px solid #fff; /* Add a bottom border to each td */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.Courses tr:last-child td {
+  border-bottom: none; /* Remove the bottom border for the last row */
+}
+
+.Courses, .EduClass{
+  text-align: center;
+}
+
+.workshop li{
+  color: yellow;
+  font-size:  150%;
+  padding-top: 2%;
+}
+
+.notes a{
+  color: white;
+  
+}
+
+.rp li{
+  color: yellow;
+  font-size:  150%;
+  padding-top: 2%;
+}
+
+.experience li{
+  color: yellow;
+  font-size:  150%;
+  padding-top: 2%;
+}
+
+h2{
+  font-size: 150%;
+  padding-top: 2%;
+}
