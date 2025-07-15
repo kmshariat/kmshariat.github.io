@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 
-
 /* Reset and base styles */
 body, html {
   margin: 0;
@@ -9,7 +8,6 @@ body, html {
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* Navigation Bar */
 .navbar {
@@ -114,12 +112,12 @@ body, html {
   }
 }
 
-
+/* Blog Section */
 .blog-section {
   max-width: 900px;
   margin: 80px auto 40px;
   padding: 0 20px;
-  font-family: 'Oranienbaum', serif; /* your chosen font */
+  font-family: 'Oranienbaum', serif;
 }
 
 .blog-section h1 {
@@ -162,7 +160,7 @@ body, html {
   text-decoration: underline;
 }
 
-
+/* Social Links */
 .social-links {
   margin-top: 15px;
   display: flex;
@@ -173,13 +171,15 @@ body, html {
 .social-links a {
   display: inline-block;
   transition: transform 0.3s ease;
+  color: #363636;  /* Make sure icons inherit this color */
 }
 
 .social-links a:hover {
   transform: scale(1.2);
+  color: #555; /* Slightly lighter on hover */
 }
 
-
+/* Timeline Section with S shape */
 .timeline-section {
   margin-top: 60px;
 }
@@ -313,4 +313,98 @@ body, html {
     margin: 0 0 20px 20px !important;
     max-width: none;
   }
+}
+
+/* Courses Section */
+.courses-section {
+  max-width: 840px;
+  margin: 40px auto;
+  padding: 0 30px;
+}
+
+.courses-category {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 40px 30px 30px 30px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.courses-category h2 {
+  font-size: 2rem;
+  font-family: serif;
+  margin: 0 0 8px 0;
+}
+
+.lesson-count {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.course-list {
+  margin-top: 18px;
+}
+
+.course-item img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  margin-right: 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 2px #ccc;
+}
+
+.course-info {
+  flex: 1;
+}
+
+.course-title {
+  font-size: 1.18rem;
+  font-weight: bold;
+  font-family: serif;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.course-desc {
+  color: #888;
+  font-size: 0.96rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+.course-item {
+  display: flex;
+  align-items: center;  /* vertically center content */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  gap: 16px; /* space between items */
+}
+
+.course-info {
+  flex: 1; /* take all available space */
+}
+
+.complete-btn {
+  margin-left: auto; /* push button to the right */
+  background-color: #33cc99;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.complete-btn:hover {
+  background-color: #28a178;
 }
