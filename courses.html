@@ -3,96 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>kmshariat</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+
+  <title>kmshariat Courses</title>
+
+  <style>
+
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+
+    /* Reset and base styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Oranienbaum', serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #fafafa;
+    }
+
+    body {
+  margin: 0;
+  padding-top: 50px; /* Adjust based on your navbar height */
+  font-family: 'Oranienbaum', serif;
+}
+
+
+    /* Courses Section */
+    .courses-section {
+      max-width: 840px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    .courses-category {
+      background: #fff;
+      border-radius: 8px;
+      padding: 40px 30px 30px 30px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .courses-category h2 {
+      font-size: 2rem;
+      font-family: serif;
+      margin: 0 0 8px 0;
+    }
+
+    .lesson-count {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .course-list {
+      margin-top: 18px;
+    }
+
+    .course-item {
+      display: flex;
+      align-items: center;  /* vertical center */
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      gap: 16px; /* space between items */
+    }
+
+    .course-item img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 0 2px #ccc;
+      flex-shrink: 0; /* prevent shrinking */
+    }
+
+    .course-info {
+      flex: 1; /* take all available space */
+    }
+
+    .course-title {
+      font-size: 1.18rem;
+      font-weight: bold;
+      font-family: serif;
+      display: block;
+      margin-bottom: 2px;
+      user-select: none;
+    }
+
+    /* Completed button styling */
+    .course-done-btn {
+      margin-left: auto;              /* push to right */
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px dashed #aaa;        /* dashed border */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: white;              /* circle background */
+      transition: border-color 0.2s, background 0.25s;
+      position: relative;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    .course-done-btn:after {
+      /* Checkmark SVG, hidden by default */
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none; /* Let clicks pass through */
+    }
+
+    .course-done-btn.done {
+      border: 2px solid #33cc99;
+      background: #33cc99;
+      animation: pop .17s ease;
+    }
+
+    .course-done-btn.done:after {
+      opacity: 1;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7L7 12L16 2' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(1);}
+      80%  { transform: scale(1.18);}
+      100% { transform: scale(1);}
+    }
+
+    .course-done-btn:focus {
+      outline: 2px solid #33cc99;
+      outline-offset: 2px;
+    }
+
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
   <nav class="navbar">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="bit-astro.html">Bit Astro</a></li>
-      <li><a href="courses.html">Course</a></li>
-      <li><a href="serene.html">Serene</a></li>
-      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../bit-astro.html" class="active">Bit Astro</a></li>
+      <li><a href="../../courses.html">Course</a></li>
+      <li><a href="../../serene.html">Serene</a></li>
+      <li><a href="../../philosophy.html">Philosophy</a></li>
     </ul>
   </nav>
 
-  <!-- Place INSIDE the <body> tag at the desired location -->
+  <section class="courses-section">
 
-<section class="courses-section">
-  <div class="courses-category">
-    <h2>Exoplanets</h2>
-    <span class="lesson-count">5 Lessons</span>
-    <div class="course-list">
-      <div class="course-item" data-course="exoplanets">
-  <img src="pages/astro/tess_logo.png" alt="Galaxy Morphology" />
-  <div class="course-info">
-    <span class="course-title">Introduction to Exoplanets</span>
-    <span class="course-desc">History and introduction to exoplanets and their importance</span>
-    <button class="complete-btn">Mark as Complete</button>
-  </div>
-</div>
+    <div class="courses-category">
+      <h2>Exoplanets</h2>
+      <span class="lesson-count">5 Lessons</span>
+      <div class="course-list">
 
-
-      <div class="course-item">
-        <img src="pages/astro/tess_logo.png" alt="tess" />
-        <div class="course-info">
-          <span class="course-title">Kepler, K2 and TESS</span>
-          <span class="course-desc">The missions dedication to exoplanet hunting</span>
-          <button class="complete-btn">Mark as Complete</button>
+        <div class="course-item" data-course="exoplanets">
+          <img src="pages/astro/tess_logo.png" alt="Galaxy Morphology" />
+          <div class="course-info">
+            <span class="course-title">Introduction to Exoplanets</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Introduction to Exoplanets as complete"></div>
         </div>
-      </div>
 
-      <div class="course-item">
-        <img src="pages/astro/tess_logo.png" alt="tess" />
-        <div class="course-info">
-          <span class="course-title">Radial Velocity Method</span>
-          <span class="course-desc">Introduction to the radial velocity and formulation</span>
-          <button class="complete-btn">Mark as Complete</button>
+        <div class="course-item">
+          <img src="pages/astro/tess_logo.png" alt="tess" />
+          <div class="course-info">
+            <span class="course-title">Kepler, K2 and TESS</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Kepler, K2 and TESS as complete"></div>
         </div>
-      </div>
 
-
-
-      <div class="course-item">
-        <img src="pages/astro/tess_logo.png" alt="tess" />
-        <div class="course-info">
-          <span class="course-title">Transit Method</span>
-          <span class="course-desc">Introduction to the transit method and related formulae</span>
-          <button class="complete-btn">Mark as Complete</button>
+        <div class="course-item">
+          <img src="pages/astro/tess_logo.png" alt="tess" />
+          <div class="course-info">
+            <span class="course-title">Radial Velocity Method</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Radial Velocity Method as complete"></div>
         </div>
-      </div>
 
-      <div class="course-item">
-        <img src="pages/astro/tess_logo.png" alt="tess" />
-        <div class="course-info">
-          <span class="course-title">Transit Timing Variation</span>
-          <span class="course-desc">N-body simulation, TTVs, O-C curves and riverplots</span>
-          <button class="complete-btn">Mark as Complete</button>
+        <div class="course-item">
+          <img src="pages/astro/tess_logo.png" alt="tess" />
+          <div class="course-info">
+            <span class="course-title">Transit Method</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Transit Method as complete"></div>
         </div>
+
+        <div class="course-item">
+          <img src="pages/astro/tess_logo.png" alt="tess" />
+          <div class="course-info">
+            <span class="course-title">Transit Timing Variation</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Transit Timing Variation as complete"></div>
+        </div>
+
       </div>
-
-
     </div>
-  </div>
 
+    <div class="courses-category">
+      <h2>Python Tools</h2>
+      <span class="lesson-count">4 Lessons</span>
+      <div class="course-list">
 
-<!--
+        <div class="course-item">
+          <img src="pages/astro/python_logo.png" alt="python" />
+          <div class="course-info">
+            <span class="course-title">Handling FITS Files</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Handling FITS Files as complete"></div>
+        </div>
 
-  <div class="courses-category">
-    <h2>Group Literature</h2>
-    <span class="lesson-count">3 Lessons</span>
-    <div class="course-list">
-      <!-- Add items similarly  -->
+        <div class="course-item">
+          <img src="pages/astro/python_logo.png" alt="python" />
+          <div class="course-info">
+            <span class="course-title">Aperture Photometry</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Aperture Photometry as complete"></div>
+        </div>
+
+        <div class="course-item">
+          <img src="pages/astro/python_logo.png" alt="python" />
+          <div class="course-info">
+            <span class="course-title">H-R Diagram</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark H-R Diagram as complete"></div>
+        </div>
+
+        <div class="course-item">
+          <img src="pages/astro/python_logo.png" alt="python" />
+          <div class="course-info">
+            <span class="course-title">Lightcurve Modelling</span>
+          </div>
+          <div class="course-done-btn" tabindex="0" role="button" aria-label="Mark Lightcurve Modelling as complete"></div>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
 
+  </section>
 
+  <script>
+    // Toggle done state on click or keyboard (Enter/Space)
+    document.querySelectorAll('.course-done-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('done');
+      });
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.classList.toggle('done');
+        }
+      });
+    });
+  </script>
 
-  <script src="script.js"></script>
 </body>
 </html>

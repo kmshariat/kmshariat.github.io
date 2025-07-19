@@ -50,3 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.querySelectorAll('.course-done-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.classList.toggle('done');
+  });
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === " " || e.key === "Enter") {
+      e.preventDefault();
+      this.classList.toggle('done');
+    }
+  });
+});
