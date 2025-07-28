@@ -470,3 +470,13 @@ body, html {
 
 
 
+a {
+  text-decoration: none; /* Remove underline from all links */
+  color: inherit; /* Inherit text color */
+}
+
+a:hover .course-item {
+  background-color: #f0f0f0; /* Or any highlight color you want */
+  cursor: pointer; /* show pointer on hover */
+  transition: background-color 0.3s ease;
+}
