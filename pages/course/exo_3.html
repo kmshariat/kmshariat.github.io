@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Radial Velocity Method</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    /* Additional styles specific to blog post */
+    .blog-post-container {
+      max-width: 800px;
+      margin: 80px auto 40px;
+      padding: 0 20px;
+      font-family: 'Oranienbaum', serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .blog-post-container h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .blog-post-container blockquote {
+      font-style: italic;
+      font-size: 1.3rem;
+      margin: 20px 0 30px;
+      padding-left: 20px;
+      border-left: 4px solid #f39c12;
+      color: #555;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .blog-post-container p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../blog.html" class="active">Blogs</a></li>
+      <li><a href="../../courses.html">Course</a></li>
+    </ul>
+  </nav>
+
+  <main class="blog-post-container">
+    <h1>Radial Velocity Method</h1>
+
+    <h2>Spectra</h2>
+
+    <p>Stars produce light that radiates in every direction and interacts with various 
+    substances in space. The different wavelengths of light can be seen then passed through a prism.
+    This makes a band of VIBGYOR which is called a spectrum. Spectra is called the 'fingerprint' of a star. It contains information about the 
+    chemical composition of the star. If the light from a star passes through a
+    gas cloud, the gas absorbs some of the light at specific wavelengths, creating
+    dark lines in the spectrum. These dark lines are called absorption lines. The
+    pattern of absorption lines is unique to each element, allowing astronomers to
+    identify the elements present in the star's atmosphere.</p>
+
+    <figure>
+        <img src="spectra_webb.jpg" alt="Spectra Types" style="width:100%; height:auto; margin-bottom:10px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Different types of spectra. Credit: NASA, ESA, and L. Hustak (STScI). </figcaption>
+    </figure>
+
+    <p>
+    Hydrogen is the most abundant element in the universe, and it has a unique
+    absorption spectrum with absorptions lines located at 6563 Å (\(H\alpha\)) and 4861 Å (\(H\beta\)).
+    The \(H\alpha\) spectral line corresponds to the wavelength emitted when an electron transitions 
+    from the third energy level (\(n=3\)) to the second energy level (\(n=2\)) in the hydrogen atom. 
+    Similarly, the \(H\beta\) spectral line represents the wavelength produced when an electron 
+    moves from the fourth orbit (\(n=4\)) down to the second orbit (\(n=2\)).
+    </p>
+  <p>
+    The general formula for the wavelength emitted during such transitions is given by:
+  </p>
+  <p>
+    \[
+      \frac{1}{\lambda} = R_H \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right) 
+    \]
+
+
+    For \(H \alpha\) line (\(n=3\) to \(n=2\))
+  <p>
+    \[
+      \frac{1}{\lambda_{\text{H}\alpha}} = R_H \left( \frac{1}{2^2} - \frac{1}{3^2} \right) = R_H \left( \frac{1}{4} - \frac{1}{9} \right) \Rightarrow \lambda_{\text{H}\alpha} = 6563 \text{Å}
+    \]
+  </p>
+
+  For \(H \beta\) line (\(n=4\) to \(n=2\))
+  <p>
+    \[
+      \frac{1}{\lambda_{\text{H}\beta}} = R_H \left( \frac{1}{2^2} - \frac{1}{4^2} \right) = R_H \left( \frac{1}{4} - \frac{1}{16} \right) \Rightarrow \lambda_{\text{H}\beta} = 4861 \text{Å}
+    \]
+
+
+    So, if we observe a spectra from a star, and the spectra has two black lines at 6563 Å and 4861 Å, we can conclude that the star has hydrogen in its atmosphere.
+    </p>
+    <h2>Radial Velocity</h2>
+
+    <p>
+        When a massive planet orbits a star at a close distance, it exerts a gravitational pull that causes the
+        star to undergo a wobble motion. This stellar wobble can be detected by observing periodic shifts
+        in the star&apos;s spectral lines, caused by the Doppler effect through high-precision spectroscopy. If
+        the star is approaching the observer then the absorption lines of the spectra gets red shifted. If the
+        star is receding away from the observer then the absorption lines of the spectra gets blue shifted.
+        By measuring these shifts, astronomers can determine the star&apos;s radial velocity semi-amplitude
+        \(K \), minimum mass of the planet \(M_p \sin{i} \) etc.
+    </p>  
+
+    <figure>
+        <img src="radial_velocity.png" alt="Radial Velocity" style="width:70%; height:auto; margin-bottom:10px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Radial velocity method uses the shift of absorption lines to detect exoplanets. Credit: Joshua Winn, The Little Book of Exoplanets </figcaption>
+    </figure>
+
+
+    <h2>Derivations</h2>
+    <p>
+    Otto Struve, a Russian astronomer, was the first to propose the radial velocity method in 1952. 
+    In his proposal, he suggested that "stellar companions can exist at very small distances. It is 
+    not unreasonable that a planet might exist at a distance of 1/50 astronomical unit, or 
+    about 3,000,000 km. Its period around a star of solar mass would then be about 1 day." </p>
+
+    <p>We know from Newtonian Mechanics that an object of mass \(m\) orbiting with \(T\) period around another 
+    object of mass \(M\) interacts according to the following relation </p>
+
+    \[T^2 = \frac{4\pi^2}{GM}R^3 \]
+
+    <p>But we also know from motion in a circular path that </p>
+    $$v = \omega R \Rightarrow v = \frac{2\pi}{T}R$$
+
+    <p>Solving it for \(R\) we get</p>
+    $$R = \frac{vT}{2\pi}$$
+
+    <p>Putting the value of \(R\) in Kepler's third law, we get </p>
+    $$T^2 = \frac{4\pi^2}{GM} \frac{v^3 T^3}{8\pi^3}$$
+
+    <p>Solving it for \(v\) we get </p>
+    $$v^3 = (2\pi GM) \frac{1}{T} \Rightarrow v^3 \propto \frac{1}{T}$$
+
+    <p>This is Kepler's trird law of planetary motion in a different form. </p>
+
+    We will now determine the radial velocity of the Sun due to the effect of Jupiter but at a distance of 1/50 AU. If Jupiter is placed at a  distance of 1/50 AU then
+    
+    $$ \text{Gravitational Constant }G = 6.673 \times 10^{-11}$$
+    $$\text{Distance of the Planet }R = 1/ 50 \text{AU} = 3\times 10^9 m$$
+    $$\text{Mass of the Star } M_r = 2 \times 10^{30} kg$$
+    $$\text{Mass of Planet } M_p = M_j = 1.89 \times 10^{27} kg$$
+
+    <p>The velocity of the planet is</p>
+    $$V_p = \sqrt{\frac{GM_r}{R}} = \sqrt{\frac{6.673\times10^{-11} \times2\times 10^{30}}{3\times 10^9}} = 210 km/s$$
+  
+    <p>From Orbital Mechanics</p> 
+
+    $$M_r V_r = M_p V_p$$
+
+    <p>Putting the value to the aforementioned equation we get the radial velocity of the star:</p>
+    $$V_r = \left( \frac{M_p}{M_r} \right)V_p = \left(\frac{1.89\times10^{27}}{2\times 10^{30}}\right) 210 = 0.2 km/s$$
+
+    <p>If a planet is at distance 1/50 AU and has 10 times the mass of Jupiter then it's velocity would be 2 km/s which is detectable using spectrographs. 
+      This is true for inclination angle \(i = 90^\circ\). Remember that \(k = \frac{M_r}{M_j}\) also called the mass scaling factor. </p>
+
+
+    <h2>Phase Plot</h2>
+
+    The phase plot shows how the radial velocity changes over one complete orbit of 
+    the planet around the star. The x-axis represents folded time, while the y-axis 
+    represents the radial velocity of the star. The maximum distance from the 
+    x-axis is called the semi-amplitude denoted by \(K\). 
+
+    <figure>
+        <img src="phase_51_peg_b.png" alt="Phase Plot" style="width:90%; height:auto; margin-bottom:10px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Phase plot of the host star of the first discovered exoplanet 51 Peg b with \(K = 59 \) m/s Credit: Mayor and Queloz (1995) </figcaption>
+    </figure>
+
+
+    <figure>
+        <img src="phase_plot_with_e.png" alt="Phase Plot" style="width:100%; height:auto; margin-bottom:10px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Effect of varying eccentricity of orbit \(e\) and periastron \(\omega \) on phase plot. </figcaption>
+    </figure>
+
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+
+</html>

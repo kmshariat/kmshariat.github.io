@@ -480,3 +480,15 @@ a:hover .course-item {
   cursor: pointer; /* show pointer on hover */
   transition: background-color 0.3s ease;
 }
+
+
+.blog-post-container blockquote {
+  font-style: normal;       /* if you want to remove italic */
+  font-size: 1.25rem;
+  margin: 20px 0 30px;
+  padding-left: 0;          /* remove left padding */
+  border-left: none;        /* remove the left border */
+  color: #333;              /* adjust text color */
+  background: none;         /* remove background */
+  font-family: "Kaushan Script", cursive;
+}
