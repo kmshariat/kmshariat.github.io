@@ -482,13 +482,31 @@ a:hover .course-item {
 }
 
 
+@font-face {
+  font-family: 'AmpersandForest';
+  src: url('/fonts/The Ampersand Forest - Carollo Playscript Medium.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 .blog-post-container blockquote {
-  font-style: normal;       /* if you want to remove italic */
-  font-size: 1.25rem;
+  font-style: normal;        /* if you want to remove italic */
+  font-size: 0.85rem;
   margin: 20px 0 30px;
-  padding-left: 0;          /* remove left padding */
-  border-left: none;        /* remove the left border */
-  color: #333;              /* adjust text color */
-  background: none;         /* remove background */
-  font-family: "Kaushan Script", cursive;
+  padding-left: 0;           /* remove left padding */
+  border-left: none;         /* remove the left border */
+  color: #333;               /* adjust text color */
+  background: none;          /* remove background */
+  font-family: 'AmpersandForest', cursive;
+}
+
+code {
+  font-style: normal;        /* if you want to remove italic */
+  font-size: 1rem;
+  margin: 20px 0 30px;
+  padding-left: 0;           /* remove left padding */
+  border-left: none;         /* remove the left border */
+  color: #333;               /* adjust text color */
+  background: none;          /* remove background */
+  font-family: 'AmpersandForest', cursive;
 }
