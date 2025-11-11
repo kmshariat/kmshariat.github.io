@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Research on Exoplanets and AI Won Three Minute Thesis Competition</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+ 
+  <style>
+    /* Additional styles specific to blog post */
+    .blog-post-container {
+      max-width: 800px;
+      margin: 80px auto 40px;
+      padding: 0 20px;
+      font-family: 'Oranienbaum', serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .blog-post-container h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .blog-post-container blockquote {
+      font-style: italic;
+      font-size: 1.3rem;
+      margin: 20px 0 30px;
+      padding-left: 20px;
+      border-left: 4px solid #f39c12;
+      color: #555;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .blog-post-container p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../blog.html" class="active">Blogs</a></li>
+      <li><a href="../../courses.html">Course</a></li>
+    </ul>
+  </nav>
+
+  <main class="blog-post-container">
+    <h1>My Research on Exoplanets and AI Won Three Minute Thesis Competition</h1>
+
+      <p>
+        Not long ago, my evening YouTube scroll was interrupted by an unexpected guest: It was a video of 
+        Emily Johnston presenting their research on mosquitoes in just three minutes. She explained her whole 
+        research so well such that it felt as if she were unveiling the mysteries of a forgotten world. 
+        For the first time I thought researching on mosquitoes can that be interesting. 
+      </p>
+
+      <p>
+        Following the caption of that video, I found out, it was a competition named the Three Minute Thesis. 
+        It was founded at the University of Queensland in 2008, and now 3MT competitions are in place in over 
+        900 universities in over 85 countries around the world.
+      </p>
+
+      <figure>
+        <img src="3MT.webp" alt="3MT" style="width:100%; height:auto; margin-bottom:5px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Photo courtesy of the University of Queensland </figcaption>
+      </figure>
+
+      <p>
+        Ever since witnessing that unforgettable 3MT presentation, I promised myself: if I ever made it to grad 
+        school, I wouldn't just write a thesis, I'd step onto a stage and tell others how interesting my research 
+        was. But I could hardly believe how quickly the opportunity found me.
+      </p>
+
+      
+
+      <p>
+        This year, North East University Bangladesh arranged the 3MT competition and invited undergrad students 
+        from different universities. My thesis on Exoplanet TTV Detection using Neural Nets was almost complete. 
+        So I thought, why not give it a try. I submitted my abstract to their website and Voilà it got accepted.
+      </p>
+
+    
+
+      <p>
+        Here is my what I presented (and got the champion title)—
+      </p>
+
+      
+    <blockquote>
+        <p>
+            People have looked at the night sky for thousands of years. They have wondered: if there exists other planets
+            like our Earth? In 1995, we found the first planet outside our solar system. Since then, we have discovered
+            more than 6,000 such planets. These are called exoplanets.
+        </p>
+        <p>
+            Telescopes such as Kepler and TESS helped us find many exoplanets. They collect huge amounts of data. 
+            But manually searching for exoplanets through this huge amount of data is near to impossible. Machine 
+            learning can help by automating how we find these planets.
+        </p>
+        <p>
+            Some planets are hard to see. We cant catch them directly with telescopes. But they pull on bigger 
+            planets, changing the timing of their orbits. Astronomers call these changes “transit timing variations”
+             or in short TTVs. TTVs are clues that a planet like our Earth might be hiding. Our research used neural 
+             networks to find these hidden planets.
+        </p>
+        <p>
+            How did we do that? We built two pipelines — one for Kepler data, one for TESS. Some of these hidden 
+            planets have already been found which we label TTVs. And some were already confirmed not to have any 
+            hidden planets which we label 'No TTVs'. Then we proceed to train our neural networks with this labeled 
+            data.
+        </p>
+        <p>
+            But there were problems: the dataset has a very small amount of TTV data compared with the other label.
+             To fix this imbalance, we used an algorithm called <code>SMOTE</code>. We also used a method called the <code>K-folding</code> 
+             method to train and test our models with better stability.
+        </p>
+        <p>
+            We tried different neural networks such as MLP, RNN and CNN. For Kepler data, the CNN, the convolutional neural 
+            network performed best. It got 84% accuracy. For TESS data, the MLP, the multilayer perceptron did better. It 
+            reached 87% accuracy. The Kepler CNN model scores an ROC-AUC of 0.83, meaning it distinguishes transit signals 
+            from noise with high accuracy. The TESS MLP achieves 0.78, showing more than average reliability. Both results 
+            well exceed random chance, reflecting strong model performance for exoplanet detection.
+        </p>
+        <p>
+            It runs smoothly on a 8 GB RAM computer and the result is also promising. This will leverage the hunt for exoplanets 
+            and hopefully soon we'll find our Earth 2.0
+        </p>
+    </blockquote>
+      
+  
+    <p>
+        I tried to make the sentences as simple as possible. Tried to break down the meanings of the jargon words. 
+        I tried to give the context of my research, what exoplanets are, why it is necessary, what was the research 
+        gap and how my work fits the gap.
+
+    </p>
+
+
+    <figure>
+        <img src="3MT_SUST.webp" alt="3MT" style="width:100%; height:auto; margin-bottom:5px;">
+        <figcaption style="text-align:center; font-size:0.75rem; color:#666;">Me and my teammate Kazi Nusrat Tasneem receiving our prize money at the ceremony. Clicked by Tajmin Jui</figcaption>
+      </figure>
+
+     <p>
+        I would like to acknowledge the contribution of two people here — Dr. Jerome de Leon of the University of Tokyo who was more than a mentor — he inspired me 
+        taught me how to hunt for distant worlds and never lose hope, even when the journey was hard. And my university 
+        supervisor — Dr. Md. Rasedujjaman, though new to astronomy, always believed in me and encouraged me to pursue 
+        what I love.
+     </p> 
+    </main>
+
+</body>
+</html>
