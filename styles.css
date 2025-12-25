@@ -54,7 +54,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -511,3 +511,31 @@ code {
   font-family: 'AmpersandForest', cursive;
 }
 
+.video-box iframe{
+  border: solid 3px #eeeeee;
+  margin-top: 5%;
+}
+
+.video-caption {
+  margin-top: 0px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(0,0%,13.2%);
+  color: #eeeeee;
+  font-family: 'Oranienbaum', serif;
+  font-size: 15px;
+  padding: 6px 14px;
+  letter-spacing: 0.08em;
+}
+
+
+.typing-hero {
+  /* place it lower on the page */
+  margin-top: 5%;      /* adjust as needed */
+  text-align: center;
+}
+
+.typing-container {
+  font-size: 1.5rem;      /* example */
+}

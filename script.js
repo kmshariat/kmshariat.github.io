@@ -1,6 +1,6 @@
 // Typing effect
 const typingElement = document.getElementById('typing');
-const texts = ['This is Shariat', 'An amateur astronomer'];
+const texts = ['This is Shariat','Research Intern at Center for Astronomy, Space Science and Astrophysics, Bangladesh','I also do science outreach programs for fun'];
 let textIndex = 0;
 let charIndex = 0;
 let typingSpeed = 100;
