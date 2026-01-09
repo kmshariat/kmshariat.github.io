@@ -539,3 +539,65 @@ code {
 .typing-container {
   font-size: 1.5rem;      /* example */
 }
+
+
+.blog-section {
+  padding: 2rem;
+}
+
+/* Flex container */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Card as a flex item */
+.blog-card {
+  display: block;              /* make the whole box clickable */
+  flex: 1 1 min(320px, 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #111827;
+  color: #e5e7eb;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+/* Typography inside cards */
+.blog-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.blog-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Hover / focus states */
+.blog-card:hover,
+.blog-card:focus-visible {
+  background: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* Responsive tweak */
+@media (max-width: 640px) {
+  .blog-grid {
+    flex-direction: column;
+  }
+}
+pre code {
+  display: block;
+  padding: 1rem;
+  background: #0b1120;
+  color: #e5e7eb;
+  border-radius: 6px;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
