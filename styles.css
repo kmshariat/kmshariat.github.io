@@ -601,3 +601,13 @@ pre code {
   font-size: 0.8rem;
   overflow-x: auto;
 }
+
+.quote {
+  border-left: 4px solid #363636;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.25rem;
+  color: #363636;
+  background-color: #f0f0f0;
+}
